@@ -1,7 +1,12 @@
-import { Request, Response } from 'express';
+import { Response } from 'express';
 
 class BaseController {
-  protected sendSuccess(res: Response, data: any, message: string = 'Success', statusCode: number = 200): void {
+  protected sendSuccess<T>(
+    res: Response,
+    data: T,
+    message: string = 'Success',
+    statusCode: number = 200
+  ): void {
     res.status(statusCode).json({
       success: true,
       message,
@@ -18,3 +23,4 @@ class BaseController {
 }
 
 export default BaseController;
+

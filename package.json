@@ -1,11 +1,11 @@
 {
-  "name": "mongodb-node",
+  "name": "mysqlite-node",
   "version": "1.0.0",
-  "description": "MongoDB Node.js TypeScript project",
+  "description": "Node.js + TypeScript REST API with SQLite (layered architecture)",
   "main": "dist/server.js",
   "scripts": {
     "start": "node dist/server.js",
-    "dev": "nodemon server.ts",
+    "dev": "nodemon",
     "build": "tsc"
   },
   "keywords": [],
@@ -14,7 +14,8 @@
   "dependencies": {
     "dotenv": "^16.6.1",
     "express": "^4.22.1",
-    "mongoose": "^8.23.1"
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "@types/express": "^4.17.25",
